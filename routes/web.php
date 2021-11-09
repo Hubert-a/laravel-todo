@@ -24,6 +24,7 @@ route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard
 
 Route::get('/NewTask', [NewTaskController::class, 'index'])->name('NewTask');
 route::post('/NewTask', [NewTaskController::class, 'store']);
+route::delete('/NewTask/{NewTask}', [NewTaskController::class, 'destroy'])->name('NewTask.destroy');
 
 Route::post('/logout', [LogoutController::class, 'store'])->name('logout');
 

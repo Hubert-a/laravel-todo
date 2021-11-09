@@ -5,7 +5,7 @@
     <div class="col-md-6 bg-danger">
     <div class="container ">
         <div class="text-center">
-            <img src="../assets/images/logo.png" alt="" class="align-items-baseline"style="width: 70%; height:70%" >
+            <img src="/images/logo.png" alt="" class="align-items-baseline"style="width: 70%; height:70%" >
         </div>
                 <p class="h3 text-center text-white">Easily Manage Your Daily Tasks</p>
                 <pre class="text-center text-white">Overwhelmed by your daily tasks?

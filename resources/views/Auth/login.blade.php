@@ -3,9 +3,9 @@
 @section('content')
 <body>
         <div class="row">
-            <div class="col-md-8 bg-danger">
+            <div class="col-md-6 bg-danger">
                 <div class="text-center">
-                    <img src="./assets/images/logo.png" alt="" class="align-items-baseline"style="width: 70%; height:70%" >
+                    <img src="/images/logo.png" alt="" class="align-items-baseline"style="width: 70%; height:70%" >
                 </div>
                 <div class="container ">
                         <p class="h3 text-center text-white">Easily Manage Your Daily Tasks</p>
@@ -14,7 +14,7 @@
                 </div> 
             </div>
 
-            <div class="col-md-4 bg-light">
+            <div class="col-md-6 bg-light">
                 <div class="container">
                     <h3 class="mt-5">Get Started...</h3>
                     <p class="mb-5"><small>Don’t have an account? <a href="{{route('register')}}" class="text-danger ms-2"  style="text-decoration: none;">Register</a></small></p>

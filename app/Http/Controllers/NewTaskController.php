@@ -25,6 +25,10 @@ class NewTaskController extends Controller
             'body'=>'required' 
         ]);
         $request->user()->NewTask()->create($request->only('body'));
-        return back();
+        return redirect()->route('dashboard');
+    }
+    public function destroy(NewTask $NewTask){
+        $NewTask->delete();
+        return redirect()->route('dashboard');
     }
 }
