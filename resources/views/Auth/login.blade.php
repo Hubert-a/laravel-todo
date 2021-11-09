@@ -5,7 +5,7 @@
         <div class="row">
             <div class="col-md-6 bg-danger">
                 <div class="text-center">
-                    <img src="/images/logo.png" alt="" class="align-items-baseline"style="width: 70%; height:70%" >
+                    <img src="{{asset('assets/images/logo.png')}}" alt="" class="align-items-baseline"style="width: 70%; height:70%" >
                 </div>
                 <div class="container ">
                         <p class="h3 text-center text-white">Easily Manage Your Daily Tasks</p>

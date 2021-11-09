@@ -7,6 +7,7 @@ use App\Http\Controllers\Auth\LogoutController;
 use App\Http\Controllers\IndexController;
 use App\Http\Controllers\NewTaskController;
 use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\AllController;
 
 /*
 |--------------------------------------------------------------------------
@@ -18,7 +19,7 @@ use App\Http\Controllers\DashboardController;
 | contains the "web" middleware group. Now create something great!
 |
 */
-route::get('/index', [IndexController::class, 'index'])->name('index');
+// route::get('/index', [IndexController::class, 'index'])->name('index');
 
 route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
 
@@ -30,6 +31,8 @@ Route::post('/logout', [LogoutController::class, 'store'])->name('logout');
 
 route::get('/login', [LoginController::class, 'index'])->name('login');
 route::post('/login', [LoginController::class, 'store']);
+
+route::get('all', [AllController::class, 'index'])->name('alltask');
 
 route::get('/register', [RegisterController::class, 'index'])->name('register');
 route::post('/register', [RegisterController::class, 'store']);

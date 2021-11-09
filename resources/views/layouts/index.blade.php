@@ -53,46 +53,6 @@
             </ul> 
 
         </nav>
-        <div class="flex justify-center">
-            <div class="w-10/12 bg-white p-6 rounded-lg">
-                <div class="d-flex justify-content-between">
-                    <div class="d-flex align-items-center">
-                        <img src="{{asset('assets/images/avatar.png')}}" alt="profile" class="profile mr-4" style="height: 120px; width: 120px;">
-                            <h1 class="h2">{{auth()->user()->name}}</h1>
-                    </div>
-                        <div class="d-flex ms-auto mb-auto">
-                            <a href="" role="button" class="btn bg-danger rounded-pill">
-                                Edit Profile    
-                            </a>
-                        </div>
-                    </div>
-                    
-                {{-- @if ($NewTask->count())
-                    @foreach($NewTask as $NewTask)
-                        <div class="mb-4">
-                            <p class="mb-2">{{$NewTask->body}}</p><span class="text-gray-600 text-sm">
-                               {{$NewTask->created_at->diffForHumans()}} 
-                            </span>
-                            <form action="{{route('NewTask.destroy',$NewTask)}}" method="post">
-                                @csrf
-                                @method('DELETE')
-                                <Button type="submit" class="text-danger">Delete</Button>
-                            </form>
-                        </div>
-                    @endforeach
-                    
-                @else
-                    <p>No Task Available</p>
-                @endif --}}
-            </div>
-            
-        
-        </div>
-        <div class="d-flex justify-content-around mt-5 mb-5">
-            <a href="{{route('alltask')}}" class="btn btn-danger" role="button" id="all" style="width: 10%;" style="a:hover="red"">All</a>
-            <a href="" class="btn btn-warning" role="button" id="progress">In Progress</a>
-            <a href="" class="btn btn-success" role="button" id="complete">Completed</a>
-        </div>
-        @yield('content')
-    </body>
-</html>
+        <body>
+            @yield('content')
+        </body>
