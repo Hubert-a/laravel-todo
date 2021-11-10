@@ -4,9 +4,20 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link rel="stylesheet" href="{{asset('css/app.css')}}">
         <title>Laravel</title>
 
-        <link rel="stylesheet" href="{{asset('css/app.css')}}">
+        <style>
+            #all:active{
+                color: red;
+            }
+            #progress:active{
+                color: yellow;
+            }
+            #complete:active{
+                color: green;
+            }
+        </style>
     </head>
     <body class="bg-gray-200">
         <nav class="p-6 bg-danger flex justify-between mb-6">
@@ -89,9 +100,9 @@
         
         </div>
         <div class="d-flex justify-content-around mt-5 mb-5">
-            <a href="{{route('alltask')}}" class="btn btn-danger" role="button" id="all" style="width: 10%;" style="a:hover="red"">All</a>
-            <a href="" class="btn btn-warning" role="button" id="progress">In Progress</a>
-            <a href="" class="btn btn-success" role="button" id="complete">Completed</a>
+            <a href="{{route('alltask')}}" class="btn btn-secondary" role="button" id="all" style="width: 8%;" style="a:hover="red"">All</a>
+            <a href="" class="btn btn-secondary" role="button" id="progress" style="width: 8%;">In Progress</a>
+            <a href="" class="btn btn-secondary" role="button" id="complete" style="width: 8%;">Completed</a>
         </div>
         @yield('content')
     </body>

@@ -8,6 +8,7 @@ use App\Http\Controllers\IndexController;
 use App\Http\Controllers\NewTaskController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\AllController;
+use App\Http\Controllers\SettingsController;
 
 /*
 |--------------------------------------------------------------------------
@@ -20,8 +21,9 @@ use App\Http\Controllers\AllController;
 |
 */
 // route::get('/index', [IndexController::class, 'index'])->name('index');
+route::get('/new-login',[LoginController::class, 'newLogin'])->name('new_login');
 
-route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
+route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard'); 
 
 Route::get('/NewTask', [NewTaskController::class, 'index'])->name('NewTask');
 route::post('/NewTask', [NewTaskController::class, 'store']);
@@ -32,7 +34,10 @@ Route::post('/logout', [LogoutController::class, 'store'])->name('logout');
 route::get('/login', [LoginController::class, 'index'])->name('login');
 route::post('/login', [LoginController::class, 'store']);
 
-route::get('all', [AllController::class, 'index'])->name('alltask');
+route::get('/all', [AllController::class, 'index'])->name('alltask');
+
+route::get('/settings', [SettingsController::class, 'index'])->name('settings');
+
 
 route::get('/register', [RegisterController::class, 'index'])->name('register');
 route::post('/register', [RegisterController::class, 'store']);

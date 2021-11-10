@@ -43,6 +43,6 @@ class User extends Authenticatable
     ];
 
     public function NewTask(){
-        return $this->hasMany(NewTask::class)->orderBy('created_at', 'DESC')->get();
+        return $this->hasMany(NewTask::class);
     }
 }

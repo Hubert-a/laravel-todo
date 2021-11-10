@@ -17,6 +17,9 @@ class LoginController extends Controller
     public function index(){
         return view('auth.login');
     }
+    public function newLogin(){
+        return view('app');
+    }
     public function store(Request $request){
         $this->validate($request,[
             'email'=>'required|email',

@@ -16,7 +16,7 @@ Get them under controll with todolist!</pre>
     <div class="col-md-6 bg-light">
         <div class="container">
                 <h3 class="mt-5">Get Started...</h3>
-                <p class="mb-5"><small>Already have an account? <a href="{{route('login')}}" class="text-danger ms-1"  style="text-decoration: none;">Login</a></small></p>
+                <p class="mb-5"><small>Already have an account? <a href="#" class="text-danger ms-1"  style="text-decoration: none;">Login</a></small></p>
                 <p class="h4 text-center mb-3">Register Now</p>
                 <p class="text-center mb-4">Please enter your details below to continue</p>
 
