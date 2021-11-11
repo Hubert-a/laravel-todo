@@ -18,6 +18,7 @@ class CreateNewTasksTable extends Migration
             // $table->integer('user_id')->unsigned()->index();
             $table->foreignId('user_id')->constrained()->onDelete('cascade');
             $table->text('body');
+            $table->string('status')->default('s');
             $table->timestamps();
         });
     }

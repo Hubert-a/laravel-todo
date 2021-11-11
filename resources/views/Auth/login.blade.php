@@ -19,8 +19,8 @@ Get them under control with todolist!</pre>
 
             <div class="col-md-6 bg-light">
                 <div class="container">
-                    
                     <form action="{{route('login')}}" method="POST">
+                        @csrf
                         <h3 class="mt-5">Get Started...</h3>
                         <p class="mb-5 message"><small>Don’t have an account? <a href="#" class="text-danger ms-2"  style="text-decoration: none;">Register</a></small></p>
     
@@ -31,7 +31,6 @@ Get them under control with todolist!</pre>
                                 {{session('status')}}
                             </div>
                         @endif
-                        @csrf
                         <div class="mb-3">
                           <label for="Email" class="form-label">Email address</label>
                           <input type="email" name="email" class="form-control @error('email') border-danger @enderror" id="Email" aria-describedby="emailHelp" >

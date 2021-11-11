@@ -9,6 +9,7 @@ use App\Http\Controllers\NewTaskController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\AllController;
 use App\Http\Controllers\SettingsController;
+use App\Http\Controllers\ProfileController;
 
 /*
 |--------------------------------------------------------------------------
@@ -38,6 +39,8 @@ route::get('/all', [AllController::class, 'index'])->name('alltask');
 
 route::get('/settings', [SettingsController::class, 'index'])->name('settings');
 
+route::get('/profile', [ProfileController::class, 'index'])->name('profile');
+route::post('/profile', [ProfileController::class, 'store']);
 
 route::get('/register', [RegisterController::class, 'index'])->name('register');
 route::post('/register', [RegisterController::class, 'store']);

@@ -18,6 +18,7 @@
                     width:100%;
                     overflow: hidden;
                     font-family: sans-serif;
+                    background:rgb(216, 216, 216)
                 }
 
                 .sidebar{
@@ -208,13 +209,14 @@
                     background:rgba(250, 56, 56, 0.842);
                 }
                 
+                #all.active{
+                    color: red
                 }
                 
 
                 .sidebar.active ~ .home_content{
                     left: 240px;
                     width: calc(100%-240px);
-
                 }
         </style>
     </head>
@@ -249,7 +251,7 @@
                     <span class="tooltip">Add a Collection</span>
                 </li>
                 <li>
-                    <a href="{{route('NewTask')}}">
+                    <a href="">
                     <i class="fas fa-user"></i>
                     <span class="links_name">View Profile</span>
                     </a>

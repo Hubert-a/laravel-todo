@@ -41,7 +41,6 @@
                                 </form>
                             </div>
                         @endforeach
-                        
                     @else
                         <p>No Task Available</p>
                     @endif

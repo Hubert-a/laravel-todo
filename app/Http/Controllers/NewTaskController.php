@@ -22,13 +22,14 @@ class NewTaskController extends Controller
 
     public function store(Request $request){
         $this->validate($request,[
-            'body'=>'required' 
+            'body'=>'required'
+
         ]);
-        $request->user()->NewTask()->create($request->only('body'));
-        return redirect()->route('alltask');
+        $request->user()->NewTask()->create($request->only('body','status'));
+        return redirect()->route('dashboard');
     }
     public function destroy(NewTask $NewTask){
         $NewTask->delete();
-        return redirect()->route('alltask');
+        return redirect()->route('dashboard');
     }
 }
