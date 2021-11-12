@@ -9,11 +9,16 @@
                 <div class="col-md-10 col-md-offset-1 ">
                     <img src="{{asset('assets/images/avatar.png')}}" alt="" style="border-radius:50%; height:150px; width:150px;float: left;margin-right:25px">
                     <h2 class="h2 mb-2">{{auth()->user()->name}}</h2>
-                    <form action="{{route('settings')}}" enctype="multipart/form-data" method="post">
+                    <form action="{{route('profile')}}" enctype="multipart/form-data" method="post">
                         @csrf
                         <div class="mb-3 flex flex-col">
                             <label for="avatar" class="h6 form-label">Profile Image</label>
                             <input type="file" name="avatar" class="" id="avatar" aria-describedby="emailHelp">
+                            @error('avatar')
+                            <div class="text-danger text-sm mt-2">
+                                {{$message}}
+                            </div>
+                            @enderror
                         </div>
                         <div class="">
                             <button type="submit" class="btn btn-sm btn-danger flex">Save changes</button>

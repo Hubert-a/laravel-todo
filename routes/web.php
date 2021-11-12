@@ -4,10 +4,8 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\Auth\RegisterController;
 use App\Http\Controllers\Auth\LogoutController;
-use App\Http\Controllers\IndexController;
 use App\Http\Controllers\NewTaskController;
 use App\Http\Controllers\DashboardController;
-use App\Http\Controllers\AllController;
 use App\Http\Controllers\SettingsController;
 use App\Http\Controllers\ProfileController;
 
@@ -34,8 +32,6 @@ Route::post('/logout', [LogoutController::class, 'store'])->name('logout');
 
 route::get('/login', [LoginController::class, 'index'])->name('login');
 route::post('/login', [LoginController::class, 'store']);
-
-route::get('/all', [AllController::class, 'index'])->name('alltask');
 
 route::get('/settings', [SettingsController::class, 'index'])->name('settings');
 
