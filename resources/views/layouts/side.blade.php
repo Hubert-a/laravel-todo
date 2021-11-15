@@ -1,7 +1,7 @@
 <!DOCTYPE>
 <html lang="en">
     <head>
-        <title>sidebar</title>
+        <title>MyDay</title>
         <link rel="stylesheet" href="/fontawesome/css/all.min.css"> 
         <link rel="stylesheet" href="{{asset('css/app.css')}}">
 
@@ -208,11 +208,6 @@
                 .sidebar.active .profile #log_out{
                     background:rgba(250, 56, 56, 0.842);
                 }
-                
-                #all.active{
-                    color: red
-                }
-                
 
                 .sidebar.active ~ .home_content{
                     left: 240px;

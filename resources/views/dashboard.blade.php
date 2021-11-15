@@ -9,11 +9,12 @@
                 <div class="d-flex justify-content-between">
                     <div class="d-flex align-items-center">
                         <img src="{{asset('assets/images/avatar.png')}}" alt="profile" class="profile mr-4" style="height: 120px; width: 120px;">
-                            <h1 class="h2">{{auth()->user()->name}}</h1>
+                            <h3 class="h3">{{auth()->user()->name}}</h3>
+                            <p class="h5">{{auth()->user()->profile->description}}</p>
                         </div>
                             <div class="d-flex ms-auto mb-auto">
-                                <a href="{{route('profile')}}" role="button" class="btn bg-danger rounded-pill">
-                                    Change Avatar    
+                                <a href="#" role="button" class="btn bg-danger rounded-pill">
+                                    Edit Profile   
                                 </a>
                             </div>
                         </div>

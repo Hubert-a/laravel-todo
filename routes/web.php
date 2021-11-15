@@ -35,8 +35,9 @@ route::post('/login', [LoginController::class, 'store']);
 
 route::get('/settings', [SettingsController::class, 'index'])->name('settings');
 
-route::get('/profile', [ProfileController::class, 'index'])->name('profile');
-route::post('/profile', [ProfileController::class, 'store']);
+// route::get('/profile', [ProfileController::class, 'index'])->name('profile');
+// route::post('/profile', [ProfileController::class, 'store']);
+route::get('/profile/{user}', [ProfileController::class, 'index'])->name('profile.show');
 
 route::get('/register', [RegisterController::class, 'index'])->name('register');
 route::post('/register', [RegisterController::class, 'store']);

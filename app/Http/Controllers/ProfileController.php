@@ -12,27 +12,18 @@ use App\Models\User;
 
 class ProfileController extends Controller
 {
-    public function index()
+    public function __construct()
     {
-        return view('profile');
+        $this->middleware(['auth']);
     }
-    public function store(Request $request){
-        $this->validate($request,[
-            'avatar'=>'required|image'
+
+    public function index($user)
+    {
+        $user=User::find($user);
+        return view('profile',[
+            'user' => $user,
         ]);
-        
-
-        dd(request()->all());
-}
-
-        //   if($request->hasFile('avatar')){
-        //       $avatar = $request->file('avatar');
-        //       $filename=time(). '.' . $avatar->getClientOriginalExtension(); 
-        //       Image::make($avatar)->resize(300,300)->save(public_path(''.$filename));
-
-        //       $user = Auth::user();
-        //       $user->avatar = $filename;
-        //       $user->save();
-        //   };
+    }
+    
 }
 

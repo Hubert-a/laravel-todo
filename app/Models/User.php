@@ -22,7 +22,6 @@ class User extends Authenticatable
         'name',
         'email',
         'password',
-        'avatar'
     ];
 
     /**
@@ -45,6 +44,10 @@ class User extends Authenticatable
     ];
     public function NewTask(){
         return $this->hasMany(NewTask::class);
+    }
+    
+    public function profile(){
+        return $this->belongsTo(Profile::class); 
     }
     
 }
