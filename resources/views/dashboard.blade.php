@@ -10,7 +10,7 @@
                     <div class="d-flex align-items-center">
                         <img src="{{asset('assets/images/avatar.png')}}" alt="profile" class="profile mr-4" style="height: 120px; width: 120px;">
                             <h3 class="h3">{{auth()->user()->name}}</h3>
-                            <p class="h5">{{auth()->user()->profile->description}}</p>
+                            <p class="h5">{{auth()->user()->profile()->created_at}}</p>
                         </div>
                             <div class="d-flex ms-auto mb-auto">
                                 <a href="#" role="button" class="btn bg-danger rounded-pill">

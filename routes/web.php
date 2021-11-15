@@ -23,6 +23,7 @@ use App\Http\Controllers\ProfileController;
 route::get('/new-login',[LoginController::class, 'newLogin'])->name('new_login');
 
 route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard'); 
+route::get('/dashboard/{user}', [DashboardController::class, 'indexx']); 
 
 Route::get('/NewTask', [NewTaskController::class, 'index'])->name('NewTask');
 route::post('/NewTask', [NewTaskController::class, 'store']);
@@ -37,7 +38,7 @@ route::get('/settings', [SettingsController::class, 'index'])->name('settings');
 
 // route::get('/profile', [ProfileController::class, 'index'])->name('profile');
 // route::post('/profile', [ProfileController::class, 'store']);
-route::get('/profile/{user}', [ProfileController::class, 'index'])->name('profile.show');
+// route::get('/profile/{user}', [ProfileController::class, 'index'])->name('profile.show');
 
 route::get('/register', [RegisterController::class, 'index'])->name('register');
 route::post('/register', [RegisterController::class, 'store']);

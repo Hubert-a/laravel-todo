@@ -3,7 +3,6 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use Faker\Provider\Image;
 use App\Http\Requests;
 use Illuminate\Support\Facades\Auth;
 use App\Models\User;
@@ -19,7 +18,7 @@ class ProfileController extends Controller
 
     public function index($user)
     {
-        $user=User::find($user);
+        $user = User::find($user);
         return view('profile',[
             'user' => $user,
         ]);
