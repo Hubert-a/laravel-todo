@@ -22,11 +22,5 @@ class DashboardController extends Controller
         ]);
         
     }
-    public function indexx($user){
-        $user = User::findOrFail($user);    
-        return view('dashboard',[
-            'user' => $user,
-        ]);
-
-    }
+    
 }

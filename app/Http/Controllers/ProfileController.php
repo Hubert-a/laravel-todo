@@ -16,13 +16,12 @@ class ProfileController extends Controller
         $this->middleware(['auth']);
     }
 
-    public function index($user)
+    public function index(Request $request)
     {
-        $user = User::find($user);
-        return view('profile',[
-            'user' => $user,
-        ]);
+        return view('profile');
+        $request->user()->profile()->create($request->only('body'));
     }
+    
     
 }
 

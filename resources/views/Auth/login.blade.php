@@ -12,8 +12,8 @@
                 </div>
                 <div class="container ">
                         <p class="h3 text-center text-white">Easily Manage Your Daily Tasks</p>
-                        <pre class="text-center text-white">Overwhelmed by your daily tasks?
-Get them under control with todolist!</pre>
+            <pre class="text-center text-white" style="font-family:helvetica;">Overwhelmed by your daily tasks?
+    Get them under control with todolist!</pre>
                 </div> 
             </div>
 

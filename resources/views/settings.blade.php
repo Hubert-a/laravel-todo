@@ -22,8 +22,8 @@
                             <input type="email" name="email" class="form-control" id="email" value="{{old('email')}}">
                         </div>
                         <div class="mb-4">
-                            <label for="pnum" class="form-label">Phone Number</label>
-                            <input type="text" name="pnum" class="form-control" id="pnum" aria-describedby="emailHelp" value="{{old('pnum')}}">
+                            <label for="description" class="form-label">Description</label>
+                            <input type="text" name="description" class="form-control" id="description" aria-describedby="emailHelp" value="{{old('description')}}">
                         </div>
                         <div class="flex justify-end">
                             <button type="submit" class="btn btn-danger flex">Save changes</button>

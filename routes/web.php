@@ -23,7 +23,6 @@ use App\Http\Controllers\ProfileController;
 route::get('/new-login',[LoginController::class, 'newLogin'])->name('new_login');
 
 route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard'); 
-route::get('/dashboard/{user}', [DashboardController::class, 'indexx']); 
 
 Route::get('/NewTask', [NewTaskController::class, 'index'])->name('NewTask');
 route::post('/NewTask', [NewTaskController::class, 'store']);
