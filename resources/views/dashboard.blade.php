@@ -37,8 +37,8 @@
      <h4 class="mr-2 h4">All task</h4>
      <p class="border text-center text-white " style="width:30px; background: #161ae8;">{{$NewTask->count()}}</p>
     </div>
-        @if ($NewTask->count())
-        @foreach($NewTask as $NewTask)
+        @if ($NewTasks->count())
+        @foreach($NewTasks as $NewTask)
         <div class="card w-1/2 mb-2">
             <div class="card-body">
                     <div>
@@ -54,6 +54,7 @@
                 </div>
                    </div>
                 @endforeach
+                {{$NewTasks->links()}}
             @else
             <div class="card w-1/2 mb-2">
                 <div class="card-body">
