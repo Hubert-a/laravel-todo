@@ -37,8 +37,8 @@
      <h4 class="mr-2 h4">All task</h4>
      <p class="border text-center text-white " style="width:30px; background: #161ae8;">{{$NewTask->count()}}</p>
     </div>
-        @if ($NewTasks->count())
-        @foreach($NewTasks as $NewTask)
+        @if ($NewTask->count())
+        @foreach($NewTask as $NewTask)
         <div class="card w-1/2 mb-2">
             <div class="card-body">
                     <div>
@@ -54,7 +54,7 @@
                 </div>
                    </div>
                 @endforeach
-                {{$NewTasks->links()}}
+                {{-- {{$NewTasks->links()}} --}}
             @else
             <div class="card w-1/2 mb-2">
                 <div class="card-body">
@@ -87,11 +87,7 @@
                     }
                 }
             </script> --}}
-<script
-    src="https://code.jquery.com/jquery-3.6.0.min.js"
-    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
-    crossorigin="anonymous">
-</script>
+
     <script>
         $(document).ready(function(){
             $('#all').on('click',function(){

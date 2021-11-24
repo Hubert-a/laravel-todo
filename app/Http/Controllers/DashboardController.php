@@ -16,9 +16,9 @@ class DashboardController extends Controller
     }   
 
     public function index(){
-        $NewTasks = NewTask::paginate(2);
+        $NewTask = NewTask::paginate(2);
         return view('dashboard',[
-            'NewTask'=> $NewTasks,
+            'NewTask'=> $NewTask,
         ]);
         
     }
