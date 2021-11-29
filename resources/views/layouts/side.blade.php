@@ -7,8 +7,8 @@
 
         <style>
                 
-                }
-                .loader_bg{
+                
+                .loader-bg{
                     position: fixed;
                     z-index: 999999;
                     background: rgb(216, 216, 216);
@@ -25,7 +25,7 @@
                     top:calc(50vh - 75px);
                     left:calc(50vw - 75px);
                 }
-                .loader:before, .loader:after{
+                .loader::before, .loader::after{
                     content: '';
                     border: 1em solid #ff5733;
                     border-radius: 50%;
@@ -37,7 +37,7 @@
                     animation: loader 1s linear infinite;
                     opacity: 0;
                 }
-                .loader:before{
+                .loader::before{
                     animation-delay: .5s;
                 }
                 @keyframes loader{
@@ -186,6 +186,10 @@
                     color: rgba(223, 0, 0, 0.842);
                     background:#fff;
                 }
+                .sidebar ul li a:active{
+                    color: blue;
+                    background: rgb(236, 161, 161);
+                }
                 .sidebar ul li a i{
                     height: 50px;
                     min-width: 50px;
@@ -264,9 +268,8 @@
         </style>
     </head>
     <body>
-
-        <div class="loader_bg">
-            <div class="loader "></div>
+        <div class="loader-bg">
+            <div class="loader h3 ">a moment...</div>
         </div>
         <div class="sidebar">
             <div class="logo_content">
@@ -336,7 +339,7 @@
 
         <script>
             setTimeout(function() {
-                $('.loader_bg').toggle();
+                $('.loader-bg').toggle();
             }, 1500 );
         </script>
 
