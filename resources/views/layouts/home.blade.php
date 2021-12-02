@@ -6,18 +6,6 @@
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <link rel="stylesheet" href="{{asset('css/app.css')}}">
         <title>Laravel</title>
-
-        <style>
-            #all:active{
-                color: red;
-            }
-            #progress:active{
-                color: yellow;
-            }
-            #complete:active{
-                color: green;
-            }
-        </style>
     </head>
     <body class="bg-gray-200">
         <nav class="p-6 bg-danger flex justify-between mb-6">
